@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70A7DAD274227F400D8875F /* FAQviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A7DAC274227F400D8875F /* FAQviewcontroller.swift */; };
 		E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E6273E228200FAB118 /* AppDelegate.swift */; };
 		E7EE65E9273E228200FAB118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E8273E228200FAB118 /* SceneDelegate.swift */; };
 		E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65EA273E228200FAB118 /* LoginViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E70A7DAC274227F400D8875F /* FAQviewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQviewcontroller.swift; sourceTree = "<group>"; };
 		E7EE65E3273E228100FAB118 /* ACLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EE65E6273E228200FAB118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7EE65E8273E228200FAB118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				E7EE65FC273E2E5400FAB118 /* ViewControllers */,
 				E7EE65E6273E228200FAB118 /* AppDelegate.swift */,
+				E70A7DAC274227F400D8875F /* FAQviewcontroller.swift */,
 				E7EE65E8273E228200FAB118 /* SceneDelegate.swift */,
 				E7EE65EC273E228200FAB118 /* Main.storyboard */,
 				E7EE65EF273E228A00FAB118 /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 				E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */,
 				E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */,
 				E7EE65FE273E2ED400FAB118 /* SignUpViewControllers.swift in Sources */,
+				E70A7DAD274227F400D8875F /* FAQviewcontroller.swift in Sources */,
 				E7EE65E9273E228200FAB118 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

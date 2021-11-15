@@ -48,6 +48,9 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="userTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="GQU-JL-nZN"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-SY-yfO">
                                                         <rect key="frame" x="0.0" y="73" width="382" height="50"/>
@@ -115,6 +118,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zFU-5M-QZH"/>
+                    <connections>
+                        <outlet property="SigninButton" destination="6lC-3J-HYE" id="Bkt-GJ-buz"/>
+                        <outlet property="UserTextField" destination="dvR-Gk-HRS" id="HMr-sO-QHl"/>
+                        <outlet property="passwordTextfield" destination="H7c-SY-yfO" id="Khx-i3-kCi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,8 +373,17 @@
             </objects>
             <point key="canvasLocation" x="2962" y="542"/>
         </scene>
+        <!--Qviewcontroller-->
+        <scene sceneID="O1U-vv-wWd">
+            <objects>
+                <hostingController id="WLb-sl-beM" customClass="FAQviewcontroller" customModule="ACLApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95K-Xx-qVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="631"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ifK-6f-9bj"/>
         <segue reference="nY2-R9-piF"/>
     </inferredMetricsTieBreakers>
     <resources>
