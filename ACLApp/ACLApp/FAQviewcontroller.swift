@@ -2,14 +2,14 @@
 //  FAQviewcontroller.swift
 //  ACLApp
 //
-//  Created by  Charlotte Hallisey on 11/15/21.
+//  Created by  Charlotte Hallisey
 //
 
 import Foundation
 import SwiftUI
 
 //Create a UIHostingController class that hosts your SwiftUI view
-class FAQviewcontroller: UIHostingController<ProfileSummary> {
+class FAQviewcontroller: UIHostingController<ProfileSummary> { //name of struct
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder, rootView: ProfileSummary())
     }
@@ -29,7 +29,7 @@ struct ProfileSummary: View {
                         .font(.title) //set font to a title
                         .padding() //for spacing
                 Spacer()
-                Text("The app is for patients breathing rehabilitation. It will provide you with a step by step tutorial of which how to properly complete your daily breathing. Additionally it will have information on all of the excersizes, a progress tracker, and more so that you have all the tools and resources to succeed on your journey of health.") //default is body
+                Text("The app is for patients with ACL rehabilitation. Patients should select which degree of injury that they have obtained and proceed with the excersizes that follow it. Information on each degree of tear is provided but a doctor should be consulted when deciding what level of severity the patient is experiencing") //default is body
                 Spacer()
                 Text("2. How frequently should this app be used?") //bold title
                     .font(.headline)
@@ -58,10 +58,10 @@ struct ProfileSummary: View {
     }
 }
 
-//struct ProfileSummary_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FAQviewcontroller().previewLayout(.fixed(width: 896, height: 414))
-//        ProfileSummary(profile: Profile.default)
-//            .environmentObject(ModelData())
-//    }
-//}
+struct ProfileSummary_Previews: PreviewProvider {
+    static var previews: some View {
+        FAQviewcontroller().previewLayout(.fixed(width: 896, height: 414))
+        ProfileSummary(profile: ProfileSummary.default)
+            .environmentObject(ModelData())
+    }
+}
