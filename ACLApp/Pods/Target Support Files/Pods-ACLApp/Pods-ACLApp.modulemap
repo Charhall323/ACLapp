@@ -1,0 +1,6 @@
+framework module Pods_ACLApp {
+  umbrella header "Pods-ACLApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

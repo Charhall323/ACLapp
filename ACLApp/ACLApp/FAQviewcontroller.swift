@@ -58,10 +58,10 @@ struct ProfileSummary: View {
     }
 }
 
-struct ProfileSummary_Previews: PreviewProvider {
-    static var previews: some View {
-        FAQviewcontroller().previewLayout(.fixed(width: 896, height: 414))
-        ProfileSummary(profile: ProfileSummary.default)
-            .environmentObject(ModelData())
-    }
-}
+//struct ProfileSummary_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FAQviewcontroller().previewLayout(.fixed(width: 896, height: 414))
+//        ProfileSummary(profile: ProfileSummary.default)
+//            .environmentObject(ModelData())
+//    }
+//}

@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2225BF233E1580E7C431F3E1 /* Pods_ACLApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9A6E18AAE8E5146F04717B /* Pods_ACLApp.framework */; };
 		E70A7DAD274227F400D8875F /* FAQviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A7DAC274227F400D8875F /* FAQviewcontroller.swift */; };
+		E70A7DAF2742D6EF00D8875F /* LifeStyleviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A7DAE2742D6EF00D8875F /* LifeStyleviewcontroller.swift */; };
+		E70A7DB12744C60A00D8875F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E70A7DB02744C60900D8875F /* GoogleService-Info.plist */; };
 		E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E6273E228200FAB118 /* AppDelegate.swift */; };
 		E7EE65E9273E228200FAB118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E8273E228200FAB118 /* SceneDelegate.swift */; };
 		E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65EA273E228200FAB118 /* LoginViewController.swift */; };
 		E7EE65EE273E228200FAB118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EE65EC273E228200FAB118 /* Main.storyboard */; };
 		E7EE65F0273E228A00FAB118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EE65EF273E228A00FAB118 /* Assets.xcassets */; };
 		E7EE65F3273E228A00FAB118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EE65F1273E228A00FAB118 /* LaunchScreen.storyboard */; };
-		E7EE65FE273E2ED400FAB118 /* SignUpViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65FD273E2ED400FAB118 /* SignUpViewControllers.swift */; };
+		E7EE65FE273E2ED400FAB118 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65FD273E2ED400FAB118 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33E0CAC815D0643DCC73ED8C /* Pods-ACLApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACLApp.release.xcconfig"; path = "Target Support Files/Pods-ACLApp/Pods-ACLApp.release.xcconfig"; sourceTree = "<group>"; };
+		E50F1295AEE9DF4556452299 /* Pods-ACLApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACLApp.debug.xcconfig"; path = "Target Support Files/Pods-ACLApp/Pods-ACLApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E70A7DAC274227F400D8875F /* FAQviewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQviewcontroller.swift; sourceTree = "<group>"; };
+		E70A7DAE2742D6EF00D8875F /* LifeStyleviewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyleviewcontroller.swift; sourceTree = "<group>"; };
+		E70A7DB02744C60900D8875F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7EE65E3273E228100FAB118 /* ACLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EE65E6273E228200FAB118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7EE65E8273E228200FAB118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +34,8 @@
 		E7EE65EF273E228A00FAB118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7EE65F2273E228A00FAB118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7EE65F4273E228A00FAB118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7EE65FD273E2ED400FAB118 /* SignUpViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllers.swift; sourceTree = "<group>"; };
+		E7EE65FD273E2ED400FAB118 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FF9A6E18AAE8E5146F04717B /* Pods_ACLApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACLApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2225BF233E1580E7C431F3E1 /* Pods_ACLApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EB87A8DA642EAC395AF459E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E50F1295AEE9DF4556452299 /* Pods-ACLApp.debug.xcconfig */,
+				33E0CAC815D0643DCC73ED8C /* Pods-ACLApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B5A32008CC59CC26887D669B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF9A6E18AAE8E5146F04717B /* Pods_ACLApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E7EE65DA273E228100FAB118 = {
 			isa = PBXGroup;
 			children = (
 				E7EE65E5273E228100FAB118 /* ACLApp */,
 				E7EE65E4273E228100FAB118 /* Products */,
+				0EB87A8DA642EAC395AF459E /* Pods */,
+				B5A32008CC59CC26887D669B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +95,7 @@
 				E7EE65EC273E228200FAB118 /* Main.storyboard */,
 				E7EE65EF273E228A00FAB118 /* Assets.xcassets */,
 				E7EE65F1273E228A00FAB118 /* LaunchScreen.storyboard */,
+				E70A7DB02744C60900D8875F /* GoogleService-Info.plist */,
 				E7EE65F4273E228A00FAB118 /* Info.plist */,
 			);
 			path = ACLApp;
@@ -76,7 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				E7EE65EA273E228200FAB118 /* LoginViewController.swift */,
-				E7EE65FD273E2ED400FAB118 /* SignUpViewControllers.swift */,
+				E7EE65FD273E2ED400FAB118 /* SignUpViewController.swift */,
+				E70A7DAE2742D6EF00D8875F /* LifeStyleviewcontroller.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -88,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7EE65F7273E228A00FAB118 /* Build configuration list for PBXNativeTarget "ACLApp" */;
 			buildPhases = (
+				A3857357BFEB67D83B0AC7CC /* [CP] Check Pods Manifest.lock */,
 				E7EE65DF273E228100FAB118 /* Sources */,
 				E7EE65E0273E228100FAB118 /* Frameworks */,
 				E7EE65E1273E228100FAB118 /* Resources */,
+				E452C1049F94833B436A6486 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,12 +172,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7EE65F3273E228A00FAB118 /* LaunchScreen.storyboard in Resources */,
+				E70A7DB12744C60A00D8875F /* GoogleService-Info.plist in Resources */,
 				E7EE65F0273E228A00FAB118 /* Assets.xcassets in Resources */,
 				E7EE65EE273E228200FAB118 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3857357BFEB67D83B0AC7CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ACLApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E452C1049F94833B436A6486 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ACLApp/Pods-ACLApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ACLApp/Pods-ACLApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ACLApp/Pods-ACLApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7EE65DF273E228100FAB118 /* Sources */ = {
@@ -154,8 +229,9 @@
 			files = (
 				E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */,
 				E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */,
-				E7EE65FE273E2ED400FAB118 /* SignUpViewControllers.swift in Sources */,
+				E7EE65FE273E2ED400FAB118 /* SignUpViewController.swift in Sources */,
 				E70A7DAD274227F400D8875F /* FAQviewcontroller.swift in Sources */,
+				E70A7DAF2742D6EF00D8875F /* LifeStyleviewcontroller.swift in Sources */,
 				E7EE65E9273E228200FAB118 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +376,7 @@
 		};
 		E7EE65F8273E228A00FAB118 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E50F1295AEE9DF4556452299 /* Pods-ACLApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Independent-Study-work.ACLApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.independentstudy.aclapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +404,7 @@
 		};
 		E7EE65F9273E228A00FAB118 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E0CAC815D0643DCC73ED8C /* Pods-ACLApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,7 +422,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Independent-Study-work.ACLApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.independentstudy.aclapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

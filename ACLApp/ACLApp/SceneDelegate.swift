@@ -2,7 +2,6 @@
 //  SceneDelegate.swift
 //  ACLApp
 //
-//  Created by  Charlotte Hallisey on 11/11/21.
 //
 
 import UIKit
