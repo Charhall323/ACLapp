@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
         let email = usernameTextfield.text!
         let password = passwordTextfield.text!
         
-        if isValidEmail(email) && isValidPassword(password) {
+        if isValidPassword(password) {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error as NSError? {
                 switch AuthErrorCode(rawValue: error.code) {
@@ -38,20 +38,8 @@ class SignUpViewController: UIViewController {
             }
         }
         else {
-            if isValidEmail(email) == false {
-                print("Email is not valid")
-            }
-            else {
-                print("Password not long enough")
-            }
+            print("Password not long enough")
         }
-    }
-    
-    
-    func isValidEmail(_ email: String) -> Bool {
-      let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-      let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-      return emailPred.evaluate(with: email)
     }
     
     func isValidPassword(_ password: String) -> Bool {
