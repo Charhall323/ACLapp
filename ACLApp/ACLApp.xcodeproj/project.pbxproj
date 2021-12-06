@@ -18,6 +18,13 @@
 		E7EE65F0273E228A00FAB118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EE65EF273E228A00FAB118 /* Assets.xcassets */; };
 		E7EE65F3273E228A00FAB118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EE65F1273E228A00FAB118 /* LaunchScreen.storyboard */; };
 		E7EE65FE273E2ED400FAB118 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65FD273E2ED400FAB118 /* SignUpViewController.swift */; };
+		E7F4A59C275D9FBC00E3BF87 /* Grade1_3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E7F4A599275D9FBB00E3BF87 /* Grade1_3.mp4 */; };
+		E7F4A59D275D9FBC00E3BF87 /* Grade1_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E7F4A59A275D9FBC00E3BF87 /* Grade1_1.mp4 */; };
+		E7F4A59E275D9FBC00E3BF87 /* Grade1_2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E7F4A59B275D9FBC00E3BF87 /* Grade1_2.mp4 */; };
+		E7F4A5A0275DA04400E3BF87 /* GradeOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F4A59F275DA04400E3BF87 /* GradeOneViewController.swift */; };
+		E7F4A5A2275DA85400E3BF87 /* Grade1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F4A5A1275DA85300E3BF87 /* Grade1_1.png */; };
+		E7F4A5A4275DB16000E3BF87 /* Grade1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F4A5A3275DB15F00E3BF87 /* Grade1_2.png */; };
+		E7F4A5A6275DB18000E3BF87 /* Grade1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = E7F4A5A5275DB18000E3BF87 /* Grade1_3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		E7EE65F2273E228A00FAB118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7EE65F4273E228A00FAB118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7EE65FD273E2ED400FAB118 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E7F4A599275D9FBB00E3BF87 /* Grade1_3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Grade1_3.mp4; path = ../../../../../../Downloads/Grade1_3.mp4; sourceTree = "<group>"; };
+		E7F4A59A275D9FBC00E3BF87 /* Grade1_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Grade1_1.mp4; path = ../../../../../../Downloads/Grade1_1.mp4; sourceTree = "<group>"; };
+		E7F4A59B275D9FBC00E3BF87 /* Grade1_2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Grade1_2.mp4; path = ../../../../../../Downloads/Grade1_2.mp4; sourceTree = "<group>"; };
+		E7F4A59F275DA04400E3BF87 /* GradeOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeOneViewController.swift; sourceTree = "<group>"; };
+		E7F4A5A1275DA85300E3BF87 /* Grade1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grade1_1.png; path = ../../../../../../../../var/folders/ck/crw1rd856wn9nwtrt5m49r_40000gn/T/TemporaryItems/NSIRD_screencaptureui_F3vlzy/Grade1_1.png; sourceTree = "<group>"; };
+		E7F4A5A3275DB15F00E3BF87 /* Grade1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grade1_2.png; path = ../../../../../../../../var/folders/ck/crw1rd856wn9nwtrt5m49r_40000gn/T/TemporaryItems/NSIRD_screencaptureui_5grA83/Grade1_2.png; sourceTree = "<group>"; };
+		E7F4A5A5275DB18000E3BF87 /* Grade1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Grade1_3.png; path = ../../../../../../../../var/folders/ck/crw1rd856wn9nwtrt5m49r_40000gn/T/TemporaryItems/NSIRD_screencaptureui_tNslq3/Grade1_3.png; sourceTree = "<group>"; };
 		FF9A6E18AAE8E5146F04717B /* Pods_ACLApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACLApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +102,7 @@
 		E7EE65E5273E228100FAB118 /* ACLApp */ = {
 			isa = PBXGroup;
 			children = (
+				E7F4A597275D9F8900E3BF87 /* Media */,
 				E7EE65FC273E2E5400FAB118 /* ViewControllers */,
 				E7EE65E6273E228200FAB118 /* AppDelegate.swift */,
 				E70A7DAC274227F400D8875F /* FAQviewcontroller.swift */,
@@ -107,8 +122,30 @@
 				E7EE65EA273E228200FAB118 /* LoginViewController.swift */,
 				E7EE65FD273E2ED400FAB118 /* SignUpViewController.swift */,
 				E70A7DAE2742D6EF00D8875F /* LifeStyleviewcontroller.swift */,
+				E7F4A59F275DA04400E3BF87 /* GradeOneViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E7F4A597275D9F8900E3BF87 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				E7F4A598275D9F9200E3BF87 /* Grade 1 */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		E7F4A598275D9F9200E3BF87 /* Grade 1 */ = {
+			isa = PBXGroup;
+			children = (
+				E7F4A59A275D9FBC00E3BF87 /* Grade1_1.mp4 */,
+				E7F4A5A1275DA85300E3BF87 /* Grade1_1.png */,
+				E7F4A59B275D9FBC00E3BF87 /* Grade1_2.mp4 */,
+				E7F4A5A3275DB15F00E3BF87 /* Grade1_2.png */,
+				E7F4A599275D9FBB00E3BF87 /* Grade1_3.mp4 */,
+				E7F4A5A5275DB18000E3BF87 /* Grade1_3.png */,
+			);
+			path = "Grade 1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +208,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F4A59D275D9FBC00E3BF87 /* Grade1_1.mp4 in Resources */,
+				E7F4A59E275D9FBC00E3BF87 /* Grade1_2.mp4 in Resources */,
+				E7F4A5A4275DB16000E3BF87 /* Grade1_2.png in Resources */,
 				E7EE65F3273E228A00FAB118 /* LaunchScreen.storyboard in Resources */,
 				E70A7DB12744C60A00D8875F /* GoogleService-Info.plist in Resources */,
+				E7F4A59C275D9FBC00E3BF87 /* Grade1_3.mp4 in Resources */,
 				E7EE65F0273E228A00FAB118 /* Assets.xcassets in Resources */,
 				E7EE65EE273E228200FAB118 /* Main.storyboard in Resources */,
+				E7F4A5A6275DB18000E3BF87 /* Grade1_3.png in Resources */,
+				E7F4A5A2275DA85400E3BF87 /* Grade1_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +273,7 @@
 				E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */,
 				E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */,
 				E7EE65FE273E2ED400FAB118 /* SignUpViewController.swift in Sources */,
+				E7F4A5A0275DA04400E3BF87 /* GradeOneViewController.swift in Sources */,
 				E70A7DAD274227F400D8875F /* FAQviewcontroller.swift in Sources */,
 				E70A7DAF2742D6EF00D8875F /* LifeStyleviewcontroller.swift in Sources */,
 				E7EE65E9273E228200FAB118 /* SceneDelegate.swift in Sources */,
