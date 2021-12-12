@@ -209,8 +209,8 @@ ICAgICAgICAgICAgICAgIAo
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-The app enables users to perform exercises specifically designed for their ACL grade. Users are given exercise options, which should be conducted and repeated through therapist supervision. The app tracks progress so that when users return to the app they are able to observe their progress as well as easily showing it to their therapists during a physical therapy session or advising. Additionally, the lifestyle page provides critical reminders of key actions to speed recovery. Profiles are utilized so that every user is able to have a personalized journey when utilizing the app. </mutableString>
+                                        <string key="content">
+The app enables users to perform exercises specifically designed for their ACL grade. Users are given exercise options, which should be conducted and repeated through therapist supervision. The app tracks progress so that when users return to the app they are able to observe their progress as well as easily showing it to their therapists during a physical therapy session or advising. Additionally, the lifestyle page provides critical reminders of key actions to speed recovery. Profiles are utilized so that every user is able to have a personalized journey when utilizing the app. </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
@@ -315,8 +315,8 @@ ICAgICAgICAgICAgICAgIAo
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-Despite the comparably large population that tear their ACL there is a lack of apps on the market for the rehabilitation journey that patients are expected to undergo. While blanket physical therapy apps sometimes have similar exercises or include sections about knee tears there is a gap in the market for a verticalized ACL recovery app. Focusing specifically on ACLs, enables the user to get a more personalized experience carefully designed for their injury rather than grouping the user's injury with many others in a less effective but more generalized approach. </mutableString>
+                                        <string key="content">
+Despite the comparably large population that tear their ACL there is a lack of apps on the market for the rehabilitation journey that patients are expected to undergo. While blanket physical therapy apps sometimes have similar exercises or include sections about knee tears there is a gap in the market for a verticalized ACL recovery app. Focusing specifically on ACLs, enables the user to get a more personalized experience carefully designed for their injury rather than grouping the user's injury with many others in a less effective but more generalized approach. </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" metaFont="system" size="14"/>
@@ -922,19 +922,51 @@ Cg
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="-2" height="-1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iif-bg-HGv">
-                                <rect key="frame" x="72" y="160" width="133" height="31"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="yU2-GE-6p3" userLabel="datePicker">
+                                <rect key="frame" x="3" y="214" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="DatePicker:" destination="VRQ-6s-xRJ" eventType="valueChanged" id="oeD-Oi-UhO"/>
+                                    <action selector="datePicker:" destination="VRQ-6s-xRJ" eventType="valueChanged" id="9oE-vv-Q9Y"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-6V-vO7">
+                                <rect key="frame" x="97" y="433" width="221" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add current date"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Submit:" destination="VRQ-6s-xRJ" eventType="touchDown" id="Pgd-hQ-Pz7"/>
+                                    <action selector="Submit:" destination="VRQ-6s-xRJ" eventType="touchUpInside" id="Uzn-Bd-x2S"/>
+                                    <action selector="SubmitButton:" destination="VRQ-6s-xRJ" eventType="touchUpInside" id="tXB-X3-HoN"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yab-fW-wV8" userLabel="fullName">
+                                <rect key="frame" x="23" y="115" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="FullName:" destination="VRQ-6s-xRJ" eventType="editingDidEnd" id="NIW-GW-WUh"/>
+                                    <action selector="fullName:" destination="VRQ-6s-xRJ" eventType="editingDidEnd" id="LD7-l8-GGk"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0PS-hX-ygQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="zRa-Li-m9P"/>
+                    <connections>
+                        <outlet property="view" destination="3Xf-6V-vO7" id="HzU-oG-QRy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74z-Vz-IIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="VRQ-6s-xRJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3208.6956521739135" y="541.74107142857144"/>
         </scene>
@@ -1385,7 +1417,7 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="104-SK-vpP"/>
+        <segue reference="2Tj-GZ-T2Z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Char" width="396" height="384"/>

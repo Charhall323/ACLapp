@@ -11,20 +11,59 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseCore
 import FirebaseCoreDiagnostics
+import FirebaseInstallations
+import FirebaseAnalytics
+import FirebaseDatabase
 
 
 class ProgressViewController: UIViewController {
-    private var db = Firestore.firestore()
-    @IBOutlet weak var AddCalendarButton: UIButton!
     
+    @IBOutlet weak var fullName: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var Submit: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        FirebaseApp.configure()
     }
     
-    @IBAction func AddCalendarTapped(_ sender: Any) {
-        FirebaseApp.configure()
+    @IBAction func buttonTapped(Submit: UIButton) {
+        UploadToCloud()
+    }
+    
+    
+    @IBAction func Submit(_ sender: Any) {
+        UploadToCloud()
+        
+    }
+    
+    func UploadToCloud() {
+        let ref = Database.database().reference()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy";
+        let strDate = dateFormatter.string(from: datePicker.date)
+        dateFormatter.dateFormat = "MM0dd-yyyy HH:mm:SS AM"
+        
+        let currentDateTime = dateFormatter.string(from: Date())
+        
+        ref.child(fullName.text!).setValue(
+        [
+            "name": fullName.text!,
+            "Date": strDate,
+            "Uploaded DateTime": currentDateTime
+        ]
+        )
+}
+}
+    //    private var db = Firestore.firestore()
+//        var ref = firebase.database().ref();
+//
+//        ref.on("value", function(snapshot) {
+//           console.log(snapshot.val());
+//        }, function (error) {
+//           console.log("Error: " + error.code);
+//        });
+        
 //        var  test = firebase.database().ref("users")
 //        var firebaseDatabaseRef: DatabaseReference!
 //        ref = Database.database().reference()
@@ -36,7 +75,7 @@ class ProgressViewController: UIViewController {
 //        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 //                FirebaseDatabase database = FirebaseDatabase.getInstance();
 //            DatabaseReference myRef = database.getReference("users").child( currentFirebaseUser.getUid()).child("friends").setValue("your First Friend");
-    }
+    
     
 
     /*
@@ -49,4 +88,3 @@ class ProgressViewController: UIViewController {
     }
     */
 
-}

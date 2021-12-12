@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>550312849513-9qrr34eq4ttjo08act9p7oa05q13g2n9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.550312849513-9qrr34eq4ttjo08act9p7oa05q13g2n9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC9yB6obq7xAQGP9OK8S0PeqIDdJpvJAjc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>550312849513</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.independentstudy.aclapp</string>
+	<key>PROJECT_ID</key>
+	<string>aclapp-af970</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aclapp-af970.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:550312849513:ios:1f786a6764be2812e772f8</string>
+	<key>DATABASE_URL</key>
+	<string>https://aclapp-af970-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

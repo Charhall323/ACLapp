@@ -8,5 +8,8 @@ target 'ACLApp' do
   # Pods for ACLApp
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Firebase/Core'
+pod 'Firebase/Analytics'
+pod 'Firebase/Database'
 
 end
