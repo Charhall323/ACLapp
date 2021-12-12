@@ -15,6 +15,7 @@
 		E75CFFBB2765931700594580 /* Grade1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = E75CFFBA2765931700594580 /* Grade1_2.png */; };
 		E75CFFC1276593F400594580 /* Grade1_3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E75CFFC0276593F300594580 /* Grade1_3.mp4 */; };
 		E75CFFC32765943900594580 /* Grade1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = E75CFFC22765943800594580 /* Grade1_3.png */; };
+		E75CFFC52765A0B100594580 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFFC42765A0B100594580 /* ProgressViewController.swift */; };
 		E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E6273E228200FAB118 /* AppDelegate.swift */; };
 		E7EE65E9273E228200FAB118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E8273E228200FAB118 /* SceneDelegate.swift */; };
 		E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65EA273E228200FAB118 /* LoginViewController.swift */; };
@@ -37,6 +38,7 @@
 		E75CFFBA2765931700594580 /* Grade1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grade1_2.png; sourceTree = "<group>"; };
 		E75CFFC0276593F300594580 /* Grade1_3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grade1_3.mp4; sourceTree = "<group>"; };
 		E75CFFC22765943800594580 /* Grade1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grade1_3.png; sourceTree = "<group>"; };
+		E75CFFC42765A0B100594580 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		E7EE65E3273E228100FAB118 /* ACLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EE65E6273E228200FAB118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7EE65E8273E228200FAB118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				E7EE65FD273E2ED400FAB118 /* SignUpViewController.swift */,
 				E70A7DAE2742D6EF00D8875F /* LifeStyleviewcontroller.swift */,
 				E7F4A59F275DA04400E3BF87 /* GradeOneViewController.swift */,
+				E75CFFC42765A0B100594580 /* ProgressViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */,
 				E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */,
 				E7EE65FE273E2ED400FAB118 /* SignUpViewController.swift in Sources */,
+				E75CFFC52765A0B100594580 /* ProgressViewController.swift in Sources */,
 				E7F4A5A0275DA04400E3BF87 /* GradeOneViewController.swift in Sources */,
 				E70A7DAD274227F400D8875F /* FAQviewcontroller.swift in Sources */,
 				E70A7DAF2742D6EF00D8875F /* LifeStyleviewcontroller.swift in Sources */,
