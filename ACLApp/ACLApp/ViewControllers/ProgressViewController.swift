@@ -10,8 +10,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseCore
-
-
+import FirebaseCoreDiagnostics
 
 
 class ProgressViewController: UIViewController {
