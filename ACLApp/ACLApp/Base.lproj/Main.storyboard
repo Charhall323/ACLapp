@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Unp-Nw-ZIu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="44F-lY-NT4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -136,7 +136,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPM-dx-0uD">
                                 <rect key="frame" x="27" y="106" width="361" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Who is this app for? 
+                                <string key="text">Who is this app for? 
 This app is for individuals recovering from ACL injuries. The app is used as an aide to physical therapy appointments and should be used under therapist supervision. 
 What are the different offerings of the app? 
 The app enables users to perform exercises specifically designed for their ACL grade. Users are given exercise options, which should be conducted and repeated through therapist supervision. The app tracks progress so that when users return to the app they are able to observe their progress as well as easily showing it to their therapists during a physical therapy session or advising. Additionally, the lifestyle page provides critical reminders of key actions to speed recovery. Profiles are utilized so that every user is able to have a personalized journey when utilizing the app. 
@@ -146,7 +146,7 @@ Why was this app created?
 Despite the comparably large population that tear their ACL there is a lack of apps on the market for the rehabilitation journey that patients are expected to undergo. While blanket physical therapy apps sometimes have similar exercises or include sections about knee tears there is a gap in the market for a verticalized ACL recovery app. Focusing specifically on ACLs, enables the user to get a more personalized experience carefully designed for their injury rather than grouping the user's injury with many others in a less effective but more generalized approach. 
 Additional questions? 
 Reach out to your personalized physical therapist. 
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -192,7 +192,7 @@ Reach out to your personalized physical therapist.
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="WTz-s6-7bJ">
-                                <rect key="frame" x="0.0" y="-83" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-91" width="414" height="761"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercises" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ho-Nc-MvZ">
@@ -203,45 +203,55 @@ Reach out to your personalized physical therapist.
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="-2" height="-1"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Pv4-30-4ci">
-                                        <rect key="frame" x="107" y="427" width="200" height="141"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="enV-re-1pM">
+                                        <rect key="frame" x="110" y="202" width="200" height="557"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwc-Tg-qe8">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Grade 1"/>
-                                                <connections>
-                                                    <segue destination="vw3-Vt-vIo" kind="show" id="sOt-hM-fYR"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ges-8t-qsQ">
-                                                <rect key="frame" x="0.0" y="55" width="200" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Grade 2"/>
-                                                <connections>
-                                                    <segue destination="EkV-qd-9RB" kind="show" id="VwO-Pb-2Un"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWF-9b-f4c">
-                                                <rect key="frame" x="0.0" y="110" width="200" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Grade 3"/>
-                                                <connections>
-                                                    <segue destination="xLd-xt-7qJ" kind="show" id="ADB-Y1-DHL"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="232" translatesAutoresizingMaskIntoConstraints="NO" id="Pv4-30-4ci">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="557"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwc-Tg-qe8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Grade 3"/>
+                                                        <connections>
+                                                            <segue destination="vw3-Vt-vIo" kind="show" id="sOt-hM-fYR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ges-8t-qsQ">
+                                                        <rect key="frame" x="0.0" y="263" width="200" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Grade 2"/>
+                                                        <connections>
+                                                            <segue destination="EkV-qd-9RB" kind="show" id="VwO-Pb-2Un"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWF-9b-f4c">
+                                                        <rect key="frame" x="0.0" y="526" width="200" height="31"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Grade 1"/>
+                                                        <connections>
+                                                            <segue destination="xLd-xt-7qJ" kind="show" id="ADB-Y1-DHL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <rect key="contentStretch" x="0.34999999999999998" y="0.0" width="1" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="QGM-wJ-me1" userLabel="width = 100"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="QGM-wJ-me1"/>
-                                        </constraints>
                                     </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-jN-U8s">
+                                        <rect key="frame" x="280" y="263" width="114" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9x-MA-4GL">
+                                        <rect key="frame" x="36" y="547" width="114" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="iw7-YJ-lJw"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="iw7-YJ-lJw" firstAttribute="bottom" secondItem="Pv4-30-4ci" secondAttribute="bottom" constant="328" id="gmo-IP-9Gh"/>
-                                    <constraint firstItem="Pv4-30-4ci" firstAttribute="top" secondItem="iw7-YJ-lJw" secondAttribute="top" constant="383" id="keL-ib-ccx"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FAQs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI6-6z-BUA">
                                 <rect key="frame" x="10" y="-73" width="131" height="63"/>
@@ -251,6 +261,10 @@ Reach out to your personalized physical therapist.
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="-2" height="-1"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oMM-Op-aLr">
+                                <rect key="frame" x="280" y="705" width="114" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9mH-sY-em2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -299,7 +313,7 @@ Reach out to your personalized physical therapist.
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaT-UL-I4H">
                                 <rect key="frame" x="27" y="106" width="361" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Food is fuel, Diet is key → Foods for sports injury recovery 
+                                <string key="text">Food is fuel, Diet is key → Foods for sports injury recovery 
 Foods that contain plenty of protein 
 Scientifically: Proteins are made up of amino acids which are used by the body to build and repair muscles and bones. After an injury the immobilized injured section declines in strength and muscle mass, protein is essential for minimizing this loss and preventing inflammation which may slow down recovery. 
 Food examples: Protein-rich foods like meat, fish, poultry, or nuts are advised. 
@@ -315,7 +329,7 @@ The benefits of water transcend across the entire body from boosting brain power
 Inflammation: Injuries lead to cell death as they cause the deprivation of tissues for their normal flow of oxygen and nutrient-rich blood. The body propels fluids to the area in order to clear out dead cells in turn enabling new cell growth. Proper hydration levels are critical for this healing process to occur. 
 Proliferation: As inflammation subsides, dead cells are removed and new vasculature begins to develop. Hydration facilitates the movement of oxygen and nutrient flow to the damaged area enabling the growth of normal scar tissue and helping them fade over time. 
 Remodeling: Overtime scar tissue develops into collagen and begins to become part of the surrounding soft tissue fibers. Proper hydration levels are critical for proper collagen levels which enables collagen to become flexible rather than restricted leading to a faster recovery. 
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -419,7 +433,7 @@ Remodeling: Overtime scar tissue develops into collagen and begins to become par
                                                     <action selector="videoOnePlayed:" destination="vw3-Vt-vIo" eventType="touchUpInside" id="CVV-7y-GlV"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHM-4q-BVb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seated Passive-Assisted Knee Extensions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHM-4q-BVb">
                                                 <rect key="frame" x="0.0" y="210" width="374" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="ASY-ss-uxT"/>
@@ -444,7 +458,7 @@ Remodeling: Overtime scar tissue develops into collagen and begins to become par
                                                     <action selector="videoTwoPlayed:" destination="vw3-Vt-vIo" eventType="touchUpInside" id="zK8-wF-7eW"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-p7-FZx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standing Single-Leg Hip Extension With Resistance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-p7-FZx">
                                                 <rect key="frame" x="0.0" y="210" width="374" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="PK9-V4-Nmq"/>
@@ -469,7 +483,7 @@ Remodeling: Overtime scar tissue develops into collagen and begins to become par
                                                     <action selector="videoThreePlayed:" destination="vw3-Vt-vIo" eventType="touchUpInside" id="IZe-OE-Rry"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-2B-9Lz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standing Hip Abduction with Resistance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-2B-9Lz">
                                                 <rect key="frame" x="0.0" y="210" width="374" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="hnk-rG-BdW"/>
@@ -482,7 +496,7 @@ Remodeling: Overtime scar tissue develops into collagen and begins to become par
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgn-Tc-Jsr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgn-Tc-Jsr">
                                 <rect key="frame" x="114" y="44" width="185" height="37"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" systemColor="systemTealColor"/>
@@ -574,7 +588,7 @@ Remodeling: Overtime scar tissue develops into collagen and begins to become par
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grade 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mao-8B-W1T">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grade 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mao-8B-W1T">
                                 <rect key="frame" x="135" y="44" width="144" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -711,14 +725,13 @@ Remodeling: Overtime scar tissue develops into collagen and begins to become par
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Pgq-OZ-0b8"/>
         <segue reference="2Tj-GZ-T2Z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Char" width="396" height="384"/>
-        <image name="Grade1_1.png" width="800" height="451"/>
-        <image name="Grade1_2.png" width="804" height="452"/>
-        <image name="Grade1_3.png" width="808" height="452"/>
+        <image name="Grade1_1.png" width="634" height="359"/>
+        <image name="Grade1_2.png" width="637" height="356"/>
+        <image name="Grade1_3.png" width="637" height="354"/>
         <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
