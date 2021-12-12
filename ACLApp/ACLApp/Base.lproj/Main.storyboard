@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign Up View Controller-->
+        <!--Sign Up -->
         <scene sceneID="ATm-un-n3i">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="44F-lY-NT4" customClass="SignUpViewController" customModule="ACLApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign Up " modalPresentationStyle="fullScreen" id="44F-lY-NT4" customClass="SignUpViewController" customModule="ACLApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z1Q-Yr-xhk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1232,10 +1232,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="2818.840579710145" y="-1406.25"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Sign In-->
         <scene sceneID="QbE-dT-iaV">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="LZM-dp-xi0" customClass="LoginViewController" customModule="ACLApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign In" modalPresentationStyle="fullScreen" id="LZM-dp-xi0" customClass="LoginViewController" customModule="ACLApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgd-aJ-OSr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1351,7 +1351,7 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KJh-4c-sfB"/>
+        <segue reference="wlT-zW-TDq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Char" width="396" height="384"/>
