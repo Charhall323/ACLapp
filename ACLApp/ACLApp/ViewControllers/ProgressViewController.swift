@@ -20,21 +20,16 @@ class ProgressViewController: UIViewController {
     
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var Submit: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         FirebaseApp.configure()
     }
     
-    @IBAction func buttonTapped(Submit: UIButton) {
-        UploadToCloud()
-    }
     
-    
-    @IBAction func Submit(_ sender: Any) {
+    @IBAction func submitButton(_ sender: Any) {
         UploadToCloud()
-        
     }
     
     func UploadToCloud() {
@@ -53,7 +48,7 @@ class ProgressViewController: UIViewController {
             "Uploaded DateTime": currentDateTime
         ]
         )
-}
+    }
 }
     //    private var db = Firestore.firestore()
 //        var ref = firebase.database().ref();
