@@ -22,13 +22,9 @@ class ProgressViewController: UIViewController {
     
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
-//    private let database = Database().reference()
-//
-    
+          
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     
