@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             catch {
                 print("Setting category to AVAudioSessionCategoryPlayback failed.")
             }
-            return true
         return true
     }
 

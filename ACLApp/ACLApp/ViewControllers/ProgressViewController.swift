@@ -25,11 +25,14 @@ class ProgressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
+    
     @IBAction func submitButton(_ sender: Any) {
-        UploadToCloud()
+        UploadToCloud() //for Name and Date
     }
+    
     
     func UploadToCloud() {
         let ref = Database.database().reference()
@@ -48,13 +51,6 @@ class ProgressViewController: UIViewController {
         ]
         )
     }
-    
-    
-    //data with three atributes - name grade and date and put them back in the table
-    
-    
-    
-    
     
     
     
