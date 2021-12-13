@@ -30,6 +30,7 @@
 		E75CFFE52765CA5600594580 /* GradeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFFE42765CA5600594580 /* GradeTwoViewController.swift */; };
 		E75CFFE72765CA6A00594580 /* GradeThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFFE62765CA6A00594580 /* GradeThreeViewController.swift */; };
 		E77EF1542766666400B6DAE0 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = E77EF1532766666300B6DAE0 /* GoogleService-Info (1).plist */; };
+		E7C3A31B2766D1AA00E931C1 /* Grade2_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E75CFFCA2765B10D00594580 /* Grade2_1.mp4 */; };
 		E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E6273E228200FAB118 /* AppDelegate.swift */; };
 		E7EE65E9273E228200FAB118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E8273E228200FAB118 /* SceneDelegate.swift */; };
 		E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65EA273E228200FAB118 /* LoginViewController.swift */; };
@@ -284,6 +285,7 @@
 				E7EE65F3273E228A00FAB118 /* LaunchScreen.storyboard in Resources */,
 				E70A7DB12744C60A00D8875F /* GoogleService-Info.plist in Resources */,
 				E75CFFBB2765931700594580 /* Grade1_2.png in Resources */,
+				E7C3A31B2766D1AA00E931C1 /* Grade2_1.mp4 in Resources */,
 				E7EE65F0273E228A00FAB118 /* Assets.xcassets in Resources */,
 				E7EE65EE273E228200FAB118 /* Main.storyboard in Resources */,
 				E75CFFC32765943900594580 /* Grade1_3.png in Resources */,

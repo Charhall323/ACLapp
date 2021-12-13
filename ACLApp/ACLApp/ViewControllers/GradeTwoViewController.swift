@@ -13,8 +13,13 @@ class GradeTwoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+    
+    func createButton() {
+        let button = UIButton(frame: CGRect(x:0, y:0, width:200, height:50))
+        button.center = view.center
+        view.addSubview(button)
     }
     
     @IBAction func videoOnePlayed(_ sender: UIButton) {
@@ -33,7 +38,7 @@ class GradeTwoViewController: UIViewController {
             }
     }
     
-    @IBAction func videoTwoPlayed(_ sender: Any) {
+    @IBAction func videoTwoPlayed(_ sender: UIButton) {
         guard let url = Bundle.main.url(forResource: "Grade2_2", withExtension: "mp4") else { return }
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
@@ -50,7 +55,8 @@ class GradeTwoViewController: UIViewController {
     }
     
     
-    @IBAction func videoThreePlayed(_ sender: Any) {
+    
+    @IBAction func VideoThreePlayed(_ sender: UIButton) {
         guard let url = Bundle.main.url(forResource: "Grade2_3", withExtension: "mp4") else { return }
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
