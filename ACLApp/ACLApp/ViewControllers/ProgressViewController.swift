@@ -48,7 +48,23 @@ class ProgressViewController: UIViewController {
         ]
         )
     }
+    
+    
+    //data with three atributes - name grade and date and put them back in the table
+    
+    
+    
+    
+    
+    
+    
 }
+
+
+
+
+
+
     //    private var db = Firestore.firestore()
 //        var ref = firebase.database().ref();
 //
