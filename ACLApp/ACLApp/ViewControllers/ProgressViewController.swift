@@ -23,6 +23,9 @@ class ProgressViewController: UIViewController {
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+//    private let database = Database().reference()
+//
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +61,12 @@ class ProgressViewController: UIViewController {
 
 
 
-
+//ref.child('users').orderByChild('name').equalTo('John Doe').on("value", function(snapshot) {
+//    console.log(snapshot.val());
+//    snapshot.forEach(function(data) {
+//        console.log(data.key);
+//    });
+//});
 
 
     //    private var db = Firestore.firestore()
