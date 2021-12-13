@@ -529,8 +529,9 @@ Reach out to your personalized physical therapist.
                             <constraint firstItem="ptq-lf-Yik" firstAttribute="centerY" secondItem="hXE-Lf-L7A" secondAttribute="centerY" id="m9e-yc-WqN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Exercises" image="figure.walk" catalog="system" id="lQu-Kt-6we"/>
+                    <tabBarItem key="tabBarItem" title="Exercises" image="figure.walk" catalog="system" id="nEg-fO-YQz" userLabel="Exercises"/>
                     <navigationItem key="navigationItem" id="8K7-eO-8rD"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLQ-Fa-urt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -552,6 +553,10 @@ Reach out to your personalized physical therapist.
                         <segue destination="BAl-A5-JK4" kind="relationship" relationship="viewControllers" id="QrE-uY-itl"/>
                         <segue destination="arQ-L5-SLV" kind="relationship" relationship="viewControllers" id="i2K-20-s6e"/>
                         <segue destination="erx-wQ-CDk" kind="relationship" relationship="viewControllers" id="2ah-sm-qmZ"/>
+                        <segue destination="vw3-Vt-vIo" kind="show" id="x29-lv-ZCX"/>
+                        <segue destination="EkV-qd-9RB" kind="show" id="VLg-lh-07k"/>
+                        <segue destination="xLd-xt-7qJ" kind="show" id="eyb-9Z-2Pb"/>
+                        <segue destination="5jB-Bt-Z7c" kind="push" id="0lh-9o-j80"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dv7-CT-oUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1013,13 +1018,13 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v7y-Vc-zO6">
-                                <rect key="frame" x="20" y="119" width="374" height="730"/>
+                                <rect key="frame" x="20" y="119" width="374" height="662"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jld-6Y-TEs">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="230"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="207.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NB-Bg-MHd">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="190"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="167.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="190" id="q3N-0d-tiV"/>
                                                 </constraints>
@@ -1030,7 +1035,7 @@ Cg
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seated Passive-Assisted Knee Extensions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHM-4q-BVb">
-                                                <rect key="frame" x="0.0" y="210" width="374" height="20"/>
+                                                <rect key="frame" x="0.0" y="187.5" width="374" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="ASY-ss-uxT"/>
                                                 </constraints>
@@ -1041,10 +1046,10 @@ Cg
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9CY-lQ-E4z">
-                                        <rect key="frame" x="0.0" y="250" width="374" height="230"/>
+                                        <rect key="frame" x="0.0" y="227.5" width="374" height="207"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAh-vG-lte">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="190"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="167"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="190" id="h6G-gy-pMm"/>
                                                 </constraints>
@@ -1055,7 +1060,7 @@ Cg
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standing Single-Leg Hip Extension With Resistance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-p7-FZx">
-                                                <rect key="frame" x="0.0" y="210" width="374" height="20"/>
+                                                <rect key="frame" x="0.0" y="187" width="374" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="PK9-V4-Nmq"/>
                                                 </constraints>
@@ -1066,10 +1071,10 @@ Cg
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OPW-Ao-Co8">
-                                        <rect key="frame" x="0.0" y="500" width="374" height="230"/>
+                                        <rect key="frame" x="0.0" y="454.5" width="374" height="207.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmY-Qd-NbQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="190"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="167.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="190" id="ODY-Vw-5ep"/>
                                                 </constraints>
@@ -1080,7 +1085,7 @@ Cg
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standing Hip Abduction with Resistance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-2B-9Lz">
-                                                <rect key="frame" x="0.0" y="210" width="374" height="20"/>
+                                                <rect key="frame" x="0.0" y="187.5" width="374" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="hnk-rG-BdW"/>
                                                 </constraints>
@@ -1453,8 +1458,10 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ADB-Y1-DHL"/>
+        <segue reference="VwO-Pb-2Un"/>
         <segue reference="sOt-hM-fYR"/>
-        <segue reference="2Tj-GZ-T2Z"/>
+        <segue reference="104-SK-vpP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Char" width="396" height="384"/>
