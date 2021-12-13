@@ -33,7 +33,7 @@ class GradeThreeViewController: UIViewController {
             }
     }
     
-    @IBAction func videoTwoPlayed(_ sender: Any) {
+    @IBAction func videoTwoPlayed(_ sender: UIButton) {
         guard let url = Bundle.main.url(forResource: "Grade3_2", withExtension: "mp4") else { return }
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
@@ -50,7 +50,7 @@ class GradeThreeViewController: UIViewController {
     }
     
     
-    @IBAction func videoThreePlayed(_ sender: Any) {
+    @IBAction func videoThreePlayed(_ sender: UIButton) {
         guard let url = Bundle.main.url(forResource: "Grade3_3", withExtension: "mp4") else { return }
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
