@@ -16,17 +16,16 @@ import FirebaseAnalytics
 import FirebaseDatabase
 
 
+
 class ProgressViewController: UIViewController {
+    
     
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseApp.configure()
     }
-    
     
     @IBAction func submitButton(_ sender: Any) {
         UploadToCloud()

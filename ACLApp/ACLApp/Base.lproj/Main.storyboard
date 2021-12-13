@@ -956,9 +956,8 @@ Cg
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="zRa-Li-m9P"/>
                     <connections>
-                        <outlet property="FullName" destination="Z7T-SW-MaW" id="eL5-Eh-RDh"/>
                         <outlet property="datePicker" destination="ar4-Iy-zJn" id="gyt-4k-Sdg"/>
-                        <outlet property="fullName" destination="Z7T-SW-MaW" id="Wp3-0S-jQx"/>
+                        <outlet property="fullName" destination="Z7T-SW-MaW" id="LP4-Du-DEu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74z-Vz-IIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
