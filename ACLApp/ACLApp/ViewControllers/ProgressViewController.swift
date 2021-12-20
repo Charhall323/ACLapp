@@ -22,9 +22,13 @@ class ProgressViewController: UIViewController {
     
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-          
+    
+//    private let database = Database().reference()
+//
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     
@@ -35,6 +39,7 @@ class ProgressViewController: UIViewController {
     
     func UploadToCloud() {
         let ref = Database.database().reference()
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy";
         let strDate = dateFormatter.string(from: datePicker.date)
@@ -42,7 +47,7 @@ class ProgressViewController: UIViewController {
         
         let currentDateTime = dateFormatter.string(from: Date())
         
-        ref.child(fullName.text!).setValue(
+        ref.child("History Log").child(fullName.text!).setValue(
         [
             "name": fullName.text!,
             "Date": strDate,
@@ -57,12 +62,6 @@ class ProgressViewController: UIViewController {
 
 
 
-//ref.child('users').orderByChild('name').equalTo('John Doe').on("value", function(snapshot) {
-//    console.log(snapshot.val());
-//    snapshot.forEach(function(data) {
-//        console.log(data.key);
-//    });
-//});
 
 
     //    private var db = Firestore.firestore()

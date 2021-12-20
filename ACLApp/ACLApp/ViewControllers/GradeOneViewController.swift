@@ -17,7 +17,7 @@ class GradeOneViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func videoOnePlayed(_ sender: UIButton) {
+    @IBAction func videoOnePlayed(_ sender: Any) {
         guard let url = Bundle.main.url(forResource: "Grade1_1", withExtension: "mp4") else { return }
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
