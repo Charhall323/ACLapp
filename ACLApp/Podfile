@@ -11,5 +11,6 @@ pod 'Firebase/Firestore'
 pod 'Firebase/Core'
 pod 'Firebase/Analytics'
 pod 'Firebase/Database'
-
+pod 'EventsCalendar'
+pod 'EventsCalendar'
 end

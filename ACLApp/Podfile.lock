@@ -344,6 +344,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - EventsCalendar (0.1.2)
   - Firebase/Analytics (8.9.1):
     - Firebase/Core
   - Firebase/Auth (8.9.1):
@@ -490,6 +491,7 @@ PODS:
   - PromisesObjC (2.0.0)
 
 DEPENDENCIES:
+  - EventsCalendar
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -500,6 +502,7 @@ SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
+    - EventsCalendar
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -521,6 +524,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  EventsCalendar: 68d53cdf14253f51391fee4fa178de9dc071211a
   Firebase: fb5114cd2bf96e2ff7bcb01d0d9a156cf5fd2f07
   FirebaseAnalytics: 4ab446ce08a3fe52e8a4303dd997cf26276bf968
   FirebaseAuth: 2b78b2a32c07b3ecfa4970bdf1d3632b8304099b
@@ -539,6 +543,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 99024b528a7bcb490259bdf5490c56e15dea35b6
+PODFILE CHECKSUM: 1388539a279770576f9921bc1bdd0756887d956e
 
 COCOAPODS: 1.11.2
