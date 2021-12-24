@@ -27,13 +27,14 @@ class SignUpViewController: UIViewController {
                 if let error = error as NSError? {
                 switch AuthErrorCode(rawValue: error.code) {
                 default:
-                    print("Error: \(error.localizedDescription)")
+                    self.showAlert(message: "Cannot create user")
                 }
               } else {
-                print("User signed up successfully")
-                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                  let vc = storyboard.instantiateViewController(withIdentifier: "TabController")
-                  self.present(vc, animated: true)
+                  self.sendVerificationMail()
+//                print("User signed up successfully")
+//                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                  let vc = storyboard.instantiateViewController(withIdentifier: "TabController")
+//                  self.present(vc, animated: true)
               }
             }
         }
@@ -46,6 +47,36 @@ class SignUpViewController: UIViewController {
         let minPasswordLength = 6
         return password.count >= minPasswordLength
       }
+    
+    func sendVerificationMail() {
+        let authUser = Auth.auth().currentUser
+        if authUser != nil && !authUser!.isEmailVerified {
+            authUser!.sendEmailVerification(completion: { (error) in
+                //notify the user that the mail has send or could nbot have because of an error
+                if error == nil {
+                    print("User signed up successfully")
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "TabController")
+                    self.present(vc, animated: true)
+                }
+                else
+                {
+                    self.showAlert(message: "Invalid Email")
+                }
+            })
+        }
+        else {
+            //either the user is not available, or the user is already verified
+                            
+        }
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: {_ in alert.dismiss(animated: true, completion: nil)})
+    }
+    
 
 }
 

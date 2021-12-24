@@ -22,6 +22,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
     
     
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,7 +37,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
         var dateComp2 = DateComponents()
         dateComp2.year = -1
         let view = MonthCalendarView(
-            startDate: Calendar.current.date(byAdding: dateComp2, to: Date()) ?? Date(),
+            startDate: Calendar.current.date(byAdding: dateComp2, to: Date()) ?? Date(), //skips the view of scrolling to the current year
             endDate: Calendar.current.date(byAdding: dateComp, to: Date()) ?? Date()
             )
         view.allowsDateSelection = true // default value: true
@@ -48,8 +49,26 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
         return view
     }()
     
+    //tells it to download events everytime the screen shows up
+    override func viewDidAppear(_ animated: Bool) {
+        allEvents = []
+        currentMonth = EventsMonth()
+        eventsForTheDay = []
+        downloadEvents()
+        //telling it to scroll to the current date
+        self.monthCalendarView.isHidden = true
+        self.monthCalendarView.scroll(to: Date(), animated: false)
+        let _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+            self.monthCalendarView.isHidden = false
+            self.activityIndicator.stopAnimating()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         
     }
     
@@ -67,7 +86,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
             let dateFormatter = DateFormatter()
             let todayM = monthDateFormatter.string(from: Date())
             let todayY = yearDateFormatter.string(from: Date())
-            dateFormatter.dateFormat = "MM/dd/YYYY HH:mm:ss"
+            dateFormatter.dateFormat = "MM//dd//YYYY HH:mm:ss"
             for ev in snapshot.children {
                 if let child = ev as? DataSnapshot {
                     if let each = child.value! as? [String: AnyObject] {
@@ -79,6 +98,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
                             let d = dayDateFormatter.string(from: e.date)
                             e.time = timeStr
                             e.description = videoStr
+                            //if there is no months add the month, day, event
                             if self.allEvents.count == 0
                             {
                                 let newEventMonth = EventsMonth()
@@ -92,6 +112,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
                                 self.allEvents.append(newEventMonth)
                             }
                             else {
+                                //look for month add month, add day to month
                                 for eventMonth in self.allEvents {
                                     if eventMonth.month == m && eventMonth.year == y {
                                         let index = eventMonth.days.firstIndex(where: ({$0.date == dateStr})) ?? -1
@@ -122,8 +143,8 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
                                         self.currentMonth = eventMonth
                                         }
                                     }
-                                }
                             }
+                        }
                         }
                     }
                 }
@@ -136,10 +157,10 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
                 }
             }
             self.monthCalendarView.delegate = self
-            self.monthCalendarView.frame = self.calendarContainer.bounds
-            self.calendarContainer.addSubview(self.monthCalendarView)
-            self.activityIndicator.stopAnimating()
-            self.tableView.reloadDate()
+            self.monthCalendarView.frame = self.containerView.bounds
+            self.containerView.addSubview(self.monthCalendarView)
+            self.tableView.reloadData()
+            self.monthCalendarView.scroll(to:Date()) //tells calendar view to go to todays date
         })
     }
     
@@ -220,6 +241,16 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
         return eventsForTheDay.count
     }
     
+    
+    @IBAction func signOutTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "goToLogin", sender: self)
+        }
+        catch {
+            print("Sign out failed")
+        }
+    }
     
 }
 

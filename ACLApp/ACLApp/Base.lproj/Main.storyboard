@@ -920,7 +920,16 @@ Cg
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXA-yE-8fj">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="341"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="on9-wQ-8al">
+                                                <rect key="frame" x="197" y="160.5" width="20" height="20"/>
+                                            </activityIndicatorView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="on9-wQ-8al" firstAttribute="centerX" secondItem="YXA-yE-8fj" secondAttribute="centerX" id="0br-vk-qka"/>
+                                            <constraint firstItem="on9-wQ-8al" firstAttribute="centerY" secondItem="YXA-yE-8fj" secondAttribute="centerY" id="aXZ-8A-XSo"/>
+                                        </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZLh-6z-z7i">
                                         <rect key="frame" x="0.0" y="341" width="414" height="341"/>
@@ -931,6 +940,14 @@ Cg
                                     <constraint firstItem="YXA-yE-8fj" firstAttribute="height" secondItem="FGX-hV-LKk" secondAttribute="height" multiplier="0.5" id="luE-dH-u1i"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMH-GG-eQh">
+                                <rect key="frame" x="310" y="60" width="80" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="erx-wQ-CDk" eventType="touchUpInside" id="A3J-6f-AeO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0PS-hX-ygQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -940,14 +957,18 @@ Cg
                             <constraint firstItem="FGX-hV-LKk" firstAttribute="leading" secondItem="0PS-hX-ygQ" secondAttribute="leading" id="GyQ-JJ-YgY"/>
                             <constraint firstItem="FGX-hV-LKk" firstAttribute="top" secondItem="RP1-Jo-gWm" secondAttribute="bottom" constant="24" id="HEl-oO-Cjx"/>
                             <constraint firstItem="RP1-Jo-gWm" firstAttribute="leading" secondItem="0PS-hX-ygQ" secondAttribute="leading" constant="145" id="HLO-LX-V0m"/>
+                            <constraint firstItem="eMH-GG-eQh" firstAttribute="centerY" secondItem="RP1-Jo-gWm" secondAttribute="centerY" id="PN8-ea-LnT"/>
                             <constraint firstItem="0PS-hX-ygQ" firstAttribute="trailing" secondItem="RP1-Jo-gWm" secondAttribute="trailing" constant="138" id="Ter-oE-tkn"/>
+                            <constraint firstItem="0PS-hX-ygQ" firstAttribute="trailing" secondItem="eMH-GG-eQh" secondAttribute="trailing" constant="24" id="ecH-Xv-vLf"/>
                             <constraint firstItem="0PS-hX-ygQ" firstAttribute="bottom" secondItem="FGX-hV-LKk" secondAttribute="bottom" id="tS5-HN-IvZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="zRa-Li-m9P"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="on9-wQ-8al" id="BYW-r8-sKS"/>
                         <outlet property="containerView" destination="YXA-yE-8fj" id="lTR-Rf-cgY"/>
                         <outlet property="tableView" destination="ZLh-6z-z7i" id="AX2-dN-DvS"/>
+                        <segue destination="LZM-dp-xi0" kind="show" identifier="goToLogin" id="IDo-dz-Krh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74z-Vz-IIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1072,7 +1093,7 @@ Cg
                                     <action selector="videoOnePlayed:" destination="EkV-qd-9RB" eventType="touchUpInside" id="3Cd-MZ-4Ge"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmk-Gh-vaD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmk-Gh-vaD">
                                 <rect key="frame" x="20" y="582" width="374" height="187"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
@@ -1137,6 +1158,7 @@ Cg
                             <constraint firstItem="0NG-hW-Xh6" firstAttribute="top" secondItem="wmk-Gh-vaD" secondAttribute="bottom" constant="8" id="Q4d-jx-cx3"/>
                             <constraint firstItem="az8-XS-Zxr" firstAttribute="top" secondItem="Te2-No-xrh" secondAttribute="bottom" constant="8" id="VDH-yS-BDp"/>
                             <constraint firstItem="9xN-lO-hAy" firstAttribute="leading" secondItem="Te2-No-xrh" secondAttribute="leading" id="WzR-hj-5nY"/>
+                            <constraint firstItem="wmk-Gh-vaD" firstAttribute="top" secondItem="S3N-Rl-8k3" secondAttribute="bottom" constant="14" id="Zhf-u2-sQn"/>
                             <constraint firstItem="Te2-No-xrh" firstAttribute="top" secondItem="mal-8m-h9x" secondAttribute="bottom" constant="18" id="Zsl-1V-FaB"/>
                             <constraint firstItem="mal-8m-h9x" firstAttribute="centerX" secondItem="S3N-Rl-8k3" secondAttribute="centerX" id="gEN-SJ-L1m"/>
                             <constraint firstItem="mal-8m-h9x" firstAttribute="centerX" secondItem="Te2-No-xrh" secondAttribute="centerX" id="jyH-Vo-Swl"/>
@@ -1357,6 +1379,7 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="IDo-dz-Krh"/>
         <segue reference="eyb-9Z-2Pb"/>
         <segue reference="VLg-lh-07k"/>
         <segue reference="x29-lv-ZCX"/>
