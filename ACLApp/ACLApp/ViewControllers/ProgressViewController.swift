@@ -72,7 +72,6 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
         
     }
     
-    
     func downloadEvents() {
         activityIndicator.startAnimating()
         let ref = Database.database().reference()
@@ -86,7 +85,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
             let dateFormatter = DateFormatter()
             let todayM = monthDateFormatter.string(from: Date())
             let todayY = yearDateFormatter.string(from: Date())
-            dateFormatter.dateFormat = "MM//dd//YYYY HH:mm:ss"
+            dateFormatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
             for ev in snapshot.children {
                 if let child = ev as? DataSnapshot {
                     if let each = child.value! as? [String: AnyObject] {
