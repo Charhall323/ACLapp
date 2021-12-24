@@ -29,6 +29,8 @@
 		E75CFFE02765B70D00594580 /* Grade3_3.png in Resources */ = {isa = PBXBuildFile; fileRef = E75CFFDF2765B70D00594580 /* Grade3_3.png */; };
 		E75CFFE52765CA5600594580 /* GradeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFFE42765CA5600594580 /* GradeTwoViewController.swift */; };
 		E75CFFE72765CA6A00594580 /* GradeThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75CFFE62765CA6A00594580 /* GradeThreeViewController.swift */; };
+		E769B434277527A60052D846 /* PlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769B433277527A60052D846 /* PlayerHelper.swift */; };
+		E769B437277537070052D846 /* EventObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769B436277537060052D846 /* EventObjects.swift */; };
 		E77EF1542766666400B6DAE0 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = E77EF1532766666300B6DAE0 /* GoogleService-Info (1).plist */; };
 		E7C3A31B2766D1AA00E931C1 /* Grade2_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E75CFFCA2765B10D00594580 /* Grade2_1.mp4 */; };
 		E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE65E6273E228200FAB118 /* AppDelegate.swift */; };
@@ -68,6 +70,8 @@
 		E75CFFDF2765B70D00594580 /* Grade3_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grade3_3.png; sourceTree = "<group>"; };
 		E75CFFE42765CA5600594580 /* GradeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeTwoViewController.swift; sourceTree = "<group>"; };
 		E75CFFE62765CA6A00594580 /* GradeThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeThreeViewController.swift; sourceTree = "<group>"; };
+		E769B433277527A60052D846 /* PlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHelper.swift; sourceTree = "<group>"; };
+		E769B436277537060052D846 /* EventObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventObjects.swift; sourceTree = "<group>"; };
 		E77EF1532766666300B6DAE0 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		E7EE65E3273E228100FAB118 /* ACLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EE65E6273E228200FAB118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,22 @@
 			path = "Grade 3";
 			sourceTree = "<group>";
 		};
+		E769B432277527830052D846 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E769B433277527A60052D846 /* PlayerHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E769B435277536CF0052D846 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E769B436277537060052D846 /* EventObjects.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		E7EE65DA273E228100FAB118 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +180,8 @@
 		E7EE65E5273E228100FAB118 /* ACLApp */ = {
 			isa = PBXGroup;
 			children = (
+				E769B435277536CF0052D846 /* Objects */,
+				E769B432277527830052D846 /* Helpers */,
 				E7F4A597275D9F8900E3BF87 /* Media */,
 				E7EE65FC273E2E5400FAB118 /* ViewControllers */,
 				E7EE65E6273E228200FAB118 /* AppDelegate.swift */,
@@ -347,6 +369,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E769B434277527A60052D846 /* PlayerHelper.swift in Sources */,
+				E769B437277537070052D846 /* EventObjects.swift in Sources */,
 				E7EE65EB273E228200FAB118 /* LoginViewController.swift in Sources */,
 				E7EE65E7273E228200FAB118 /* AppDelegate.swift in Sources */,
 				E7EE65FE273E2ED400FAB118 /* SignUpViewController.swift in Sources */,
