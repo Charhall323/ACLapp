@@ -15,6 +15,7 @@ import FirebaseInstallations
 import FirebaseAnalytics
 import FirebaseDatabase
 import EventsCalendar
+//installed all cocoa pods above by typing them in and then typing pod install - enables additional functionalities
 
 
 
@@ -40,12 +41,12 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
             startDate: Calendar.current.date(byAdding: dateComp2, to: Date()) ?? Date(), //skips the view of scrolling to the current year
             endDate: Calendar.current.date(byAdding: dateComp, to: Date()) ?? Date()
             )
-        view.allowsDateSelection = true // default value: true
+        view.allowsDateSelection = true
         view.selectedDate = Date()
         
-        view.isPagingEnabled = true // default value: true
-        view.scrollDirection = .horizontal // default value: .horizontal
-        view.viewConfiguration = CalendarConfig() // default valut: .default
+        view.isPagingEnabled = true
+        view.scrollDirection = .horizontal
+        view.viewConfiguration = CalendarConfig()
         return view
     }()
     
