@@ -58,7 +58,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
         //telling it to scroll to the current date
         self.monthCalendarView.isHidden = true
         self.monthCalendarView.scroll(to: Date(), animated: false)
-        let _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+        let timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
             self.monthCalendarView.isHidden = false
             self.activityIndicator.stopAnimating()
         }
@@ -159,7 +159,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
             self.monthCalendarView.frame = self.containerView.bounds
             self.containerView.addSubview(self.monthCalendarView)
             self.tableView.reloadData()
-            self.monthCalendarView.scroll(to:Date()) //tells calendar view to go to todays date
+//            self.monthCalendarView.scroll(to:Date()) //tells calendar view to go to todays date
         })
     }
     
@@ -225,6 +225,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
                 }
             }
         }
+        self.monthCalendarView.scroll(to: Date(), animated: true) //CHANGED THIS
         return Set(days.map{$0})
     }
         
