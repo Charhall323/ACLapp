@@ -75,17 +75,19 @@ class GradeTwoViewController: UIViewController {
             }
     }
     
-    func addTimeObserver(player: AVPlayer, videoName: String) {
-        let timeScale = CMTimeScale(NSEC_PER_SEC)
-        let time = CMTime(seconds: 1.5, preferredTimescale: timeScale)
+    func addTimeObserver(player: AVPlayer, videoName: String) { //have to observe the time to every 1.5 seconds to find out where you are in video to see if you have reached 80%
+        let timeScale = CMTimeScale(NSEC_PER_SEC) //time scale is telling the system to use seconds
+        let time = CMTime(seconds: 1.5, preferredTimescale: timeScale) //setting the system to check every 1.5 seconds to see if the current time is over 80%
         timeObserver = player.addPeriodicTimeObserver(forInterval:time, queue: .main) {
+            //creating the time observer itself and adding it to the class local variable so that it can be removed once reaches 80% (avoids having repeats)
             [weak self] time in
-            if let totalVideoDuration = player.currentItem?.duration.seconds, let self = self {
-                if time.seconds >= totalVideoDuration * 0.8 {
-                    PlayerHelper.uploadLogToFB(grade: "Grade 2", videoName: videoName, completionDate: Date())
-                    if let observer = self.timeObserver {
-                        player.removeTimeObserver(observer)
-                        self.timeObserver = nil
+            if let totalVideoDuration = player.currentItem?.duration.seconds, let self = self { //looking at the specific video duration
+                if time.seconds >= totalVideoDuration * 0.8 { //if the video passes 80%
+                    //helperfunction Player Helper below used because need to call the function multiple times so create it in a second class and put the function there and then call it each time
+                    PlayerHelper.uploadLogToFB(grade: "Grade 2", videoName: videoName, completionDate: Date()) //upload to firebase and pass the video name to completion date (so that it will show up in progress view controller)
+                    if let observer = self.timeObserver { //if the observer has reached 80% and the video has been added to the progress log, remove the time observer (so that it does not send to firebase again)
+                        player.removeTimeObserver(observer) //removes time observer
+                        self.timeObserver = nil //removes time observer
                     }
                 }
             }
