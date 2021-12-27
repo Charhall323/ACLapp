@@ -20,14 +20,14 @@ class GradeOneViewController: UIViewController {
     }
     
     @IBAction func videoOnePlayed(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "Grade1_1", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade1_1", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-            let player = AVPlayer(url: url)
+            let player = AVPlayer(url: url) //plays the video (player is of type AV player)
 
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
-        addTimeObserver(player: player, videoName: "Seated Passive Assisted Knee Extensions")
+        addTimeObserver(player: player, videoName: "Seated Passive Assisted Knee Extensions") //time observer is what tracks the video playing so that know when hit 80%
             controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
@@ -37,32 +37,32 @@ class GradeOneViewController: UIViewController {
     }
     
     @IBAction func videoTwoPlayed(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "Grade1_2", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade1_2", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-            let player = AVPlayer(url: url)
+            let player = AVPlayer(url: url) //plays the video (player is of type AV player)
 
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
-        addTimeObserver(player: player, videoName: "Standing Single Leg Hip Extension With Resist")
+        addTimeObserver(player: player, videoName: "Standing Single Leg Hip Extension With Resist") //time observer is what tracks the video playing so that know when hit 80%
             controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
-            present(controller, animated: true) {
+            present(controller, animated: true) { //player actually playing 
                 player.play()
             }
     }
     
     
     @IBAction func videoThreePlayed(_ sender: Any) {
-        guard let url = Bundle.main.url(forResource: "Grade1_3", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade1_3", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-            let player = AVPlayer(url: url)
+            let player = AVPlayer(url: url) //plays the video (player is of type AV player)
 
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
-        addTimeObserver(player: player, videoName: "Standing Hip Abduction with Resistance")
+        addTimeObserver(player: player, videoName: "Standing Hip Abduction with Resistance") //time observer is what tracks the video playing so that know when hit 80%
             controller.player = player //actually tracks the video playing 
 
             // Modally present the player and call the player's play() method when complete.

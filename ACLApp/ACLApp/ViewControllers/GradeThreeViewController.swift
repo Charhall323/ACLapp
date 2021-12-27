@@ -9,7 +9,7 @@ import UIKit
 import AVKit
 
 class GradeThreeViewController: UIViewController {
-    var timeObserver: Any?
+    var timeObserver: Any? //necessary for the function addTimeObserver
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +18,14 @@ class GradeThreeViewController: UIViewController {
     }
     
     @IBAction func videoOnePlayed(_ sender: UIButton) {
-        guard let url = Bundle.main.url(forResource: "Grade3_1", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade3_1", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-            let player = AVPlayer(url: url)
+            let player = AVPlayer(url: url) //plays the video (player is of type AV player)
 
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
-        addTimeObserver(player: player, videoName: "Standing Mini-Squat")
+        addTimeObserver(player: player, videoName: "Standing Mini-Squat") //time observer is what tracks the video playing so that know when hit 80%
             controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
@@ -35,14 +35,14 @@ class GradeThreeViewController: UIViewController {
     }
     
     @IBAction func videoTwoPlayed(_ sender: UIButton) {
-        guard let url = Bundle.main.url(forResource: "Grade3_2", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade3_2", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-            let player = AVPlayer(url: url)
+            let player = AVPlayer(url: url) //plays the video (player is of type AV player)
 
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
-        addTimeObserver(player: player, videoName: "​​Standing AROM Double Leg Calf Raises")
+        addTimeObserver(player: player, videoName: "​​Standing AROM Double Leg Calf Raises") //time observer is what tracks the video playing so that know when hit 80%
             controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
@@ -53,14 +53,14 @@ class GradeThreeViewController: UIViewController {
     
     
     @IBAction func videoThreePlayed(_ sender: UIButton) {
-        guard let url = Bundle.main.url(forResource: "Grade3_3", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade3_3", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-            let player = AVPlayer(url: url)
+            let player = AVPlayer(url: url) //plays the video (player is of type AV player)
 
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
-        addTimeObserver(player: player, videoName: "Side Step-Up")
+        addTimeObserver(player: player, videoName: "Side Step-Up") //time observer is what tracks the video playing so that know when hit 80%
             controller.player = player //actually tracks the video playing 
 
             // Modally present the player and call the player's play() method when complete.

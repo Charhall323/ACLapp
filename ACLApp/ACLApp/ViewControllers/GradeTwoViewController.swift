@@ -6,31 +6,31 @@
 //
 
 import UIKit
-import AVKit
+import AVKit //for AV player
 
 class GradeTwoViewController: UIViewController {
-    var timeObserver: Any?
+    var timeObserver: Any? //setting up variable for the time tracker
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    func createButton() {
-        let button = UIButton(frame: CGRect(x:0, y:0, width:200, height:50))
-        button.center = view.center
+    func createButton() { //button to play video
+        let button = UIButton(frame: CGRect(x:0, y:0, width:200, height:50)) //parameters for button
+        button.center = view.center //button playing
         view.addSubview(button)
     }
     
     @IBAction func videoOnePlayed(_ sender: UIButton) {
-        guard let url = Bundle.main.url(forResource: "Grade2_1", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade2_1", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-            let player = AVPlayer(url: url)
+            let player = AVPlayer(url: url) //plays the video (player is of type AV player)
 
             // Create a new AVPlayerViewController and pass it a reference to the player.
-            let controller = AVPlayerViewController()
-        addTimeObserver(player: player, videoName: "Sideline Hip Abduction")
+            let controller = AVPlayerViewController() //needed for the user to be able to manipulate the video
+        addTimeObserver(player: player, videoName: "Sideline Hip Abduction") //time observer is what tracks the video playing so that know when hit 80%
             controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
@@ -40,14 +40,14 @@ class GradeTwoViewController: UIViewController {
     }
     
     @IBAction func videoTwoPlayed(_ sender: UIButton) {
-        guard let url = Bundle.main.url(forResource: "Grade2_2", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade2_2", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
             let player = AVPlayer(url: url)
 
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
-        addTimeObserver(player: player, videoName: "Standing AROM Single Leg Calf Raises")
+        addTimeObserver(player: player, videoName: "Standing AROM Single Leg Calf Raises") //time observer is what tracks the video playing so that know when hit 80%
             controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
@@ -59,7 +59,7 @@ class GradeTwoViewController: UIViewController {
     
     
     @IBAction func VideoThreePlayed(_ sender: UIButton) {
-        guard let url = Bundle.main.url(forResource: "Grade2_3", withExtension: "mp4") else { return }
+        guard let url = Bundle.main.url(forResource: "Grade2_3", withExtension: "mp4") else { return } //URL from video (embedded in AV player to play the video)
 
             // Create an AVPlayer, passing it the HTTP Live Streaming URL.
             let player = AVPlayer(url: url)
@@ -67,7 +67,7 @@ class GradeTwoViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Standing Anterior Reachance")
-            controller.player = player //actually tracks the video playing 
+            controller.player = player //actually tracks the video playing  //time observer is what tracks the video playing so that know when hit 80%
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {
