@@ -31,7 +31,7 @@ class GradeTwoViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Sideline Hip Abduction")
-            controller.player = player
+            controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {
@@ -48,7 +48,7 @@ class GradeTwoViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Standing AROM Single Leg Calf Raises")
-            controller.player = player
+            controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {
@@ -67,7 +67,7 @@ class GradeTwoViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Standing Anterior Reachance")
-            controller.player = player
+            controller.player = player //actually tracks the video playing 
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {

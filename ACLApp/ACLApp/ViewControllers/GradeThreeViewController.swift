@@ -26,7 +26,7 @@ class GradeThreeViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Standing Mini-Squat")
-            controller.player = player
+            controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {
@@ -43,7 +43,7 @@ class GradeThreeViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "​​Standing AROM Double Leg Calf Raises")
-            controller.player = player
+            controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {
@@ -61,7 +61,7 @@ class GradeThreeViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Side Step-Up")
-            controller.player = player
+            controller.player = player //actually tracks the video playing 
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {

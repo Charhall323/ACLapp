@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  ACLApp
 //
-//
+// Purpose (of windowScene): checks with firebase to see if logged in and changes the view controller if you are instead of starting at sign up screen starts at tab controller
 
 import UIKit
 import FirebaseAuth
@@ -11,19 +11,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        if (Auth.auth().currentUser != nil) {
-            let window = UIWindow(windowScene: windowScene)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialVC = storyboard.instantiateViewController(withIdentifier: "TabController")
-            window.rootViewController = initialVC
-            self.window = window
-            self.window?.makeKeyAndVisible()
+        guard let windowScene = (scene as? UIWindowScene) else { return } // looking at the window
+        if (Auth.auth().currentUser != nil) { //checks if the user is logged in, continues if the user is logged in
+            let window = UIWindow(windowScene: windowScene) //gets the current scene window
+            let storyboard = UIStoryboard(name: "Main", bundle: nil) //connecting to the storyboard
+            let initialVC = storyboard.instantiateViewController(withIdentifier: "TabController") //gets the tab view controller and puts it first, changes view from sign up to tab view (so that the user can stay signed in)
+            window.rootViewController = initialVC //changes view controller, initaties tab view as the first view controller
+            self.window = window //take this window
+            self.window?.makeKeyAndVisible() //if logged in do not need to see log in screen, makes tab view window visible
         }
     }
 

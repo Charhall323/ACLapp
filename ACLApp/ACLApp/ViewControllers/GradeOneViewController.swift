@@ -28,7 +28,7 @@ class GradeOneViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Seated Passive Assisted Knee Extensions")
-            controller.player = player
+            controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {
@@ -45,7 +45,7 @@ class GradeOneViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Standing Single Leg Hip Extension With Resist")
-            controller.player = player
+            controller.player = player //actually tracks the video playing
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {
@@ -63,7 +63,7 @@ class GradeOneViewController: UIViewController {
             // Create a new AVPlayerViewController and pass it a reference to the player.
             let controller = AVPlayerViewController()
         addTimeObserver(player: player, videoName: "Standing Hip Abduction with Resistance")
-            controller.player = player
+            controller.player = player //actually tracks the video playing 
 
             // Modally present the player and call the player's play() method when complete.
             present(controller, animated: true) {
@@ -82,7 +82,7 @@ class GradeOneViewController: UIViewController {
                     PlayerHelper.uploadLogToFB(grade: "Grade 3", videoName: videoName, completionDate: Date()) //upload to firebase and pass the video name to completion date (so that it will show up in progress view controller)
                     if let observer = self.timeObserver { //if the observer has reached 80% and the video has been added to the progress log, remove the time observer (so that it does not send to firebase again)
                         player.removeTimeObserver(observer) //removes time observer
-                        self.timeObserver = nil //removes time observer 
+                        self.timeObserver = nil //removes time observer
                     }
                 }
             }

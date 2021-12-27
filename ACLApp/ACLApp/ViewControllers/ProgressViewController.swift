@@ -20,7 +20,7 @@ import EventsCalendar
 
 
 class ProgressViewController: UIViewController, CalendarViewDelegate, UITableViewDataSource, UITableViewDelegate{
-    
+    //delegate = allows an object to communicate back to its owner in an uncoupled way - can be used to control or modify the behavior of another object
     
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -34,12 +34,13 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
     //comes from events calendar cocoa pods
     lazy var monthCalendarView = { () -> MonthCalendarView in
         var dateComp = DateComponents()
-        dateComp.year = 1
+        dateComp.year = 1 // one year in the future
         var dateComp2 = DateComponents()
-        dateComp2.year = -1
+        dateComp2.year = -1 // today
         let view = MonthCalendarView(
-            startDate: Calendar.current.date(byAdding: dateComp2, to: Date()) ?? Date(), //skips the view of scrolling to the current year
-            endDate: Calendar.current.date(byAdding: dateComp, to: Date()) ?? Date()
+            startDate: Calendar.current.date(byAdding: dateComp2, to: Date()) ?? Date(), //starts at today -1 year (so calendar goes back to december 2020 when it is december 2021)
+                //do not see this as the page because of scroll view (created further below)
+            endDate: Calendar.current.date(byAdding: dateComp, to: Date()) ?? Date() //current date is this month that is what it goes to (do not need future months because could not watch a video at a future date)
             )
         view.allowsDateSelection = true
         view.selectedDate = Date()
@@ -74,32 +75,34 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
     }
     
     func downloadEvents() {
-        activityIndicator.startAnimating()
-        let ref = Database.database().reference()
-        let monthDateFormatter = DateFormatter()
-        monthDateFormatter.dateFormat = "MM"
-        let yearDateFormatter = DateFormatter()
-        yearDateFormatter.dateFormat = "YYYY"
-        let dayDateFormatter = DateFormatter()
-        dayDateFormatter.dateFormat = "dd"
-        ref.child("users/\(Auth.auth().currentUser?.uid ?? "")/events").observe(.value, with:{ (snapshot: DataSnapshot) in
-            let dateFormatter = DateFormatter()
-            let todayM = monthDateFormatter.string(from: Date())
-            let todayY = yearDateFormatter.string(from: Date())
-            dateFormatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
-            for ev in snapshot.children {
-                if let child = ev as? DataSnapshot {
-                    if let each = child.value! as? [String: AnyObject] {
-                        if let dateStr = each["dateWatched"] as? String, let timeStr = each["timeWatched"] as? String, let videoStr = each["videoWatched"] as? String {
-                            let e = Event()
-                            e.date = dateFormatter.date(from: "\(dateStr) \(timeStr)") ?? Date()
-                            let m = monthDateFormatter.string(from: e.date)
-                            let y = yearDateFormatter.string(from: e.date)
-                            let d = dayDateFormatter.string(from: e.date)
-                            e.time = timeStr
-                            e.description = videoStr
+        activityIndicator.startAnimating() //tells the indicator to start showing (tells people that the calendar is loading basically, something is happening, gives time to load the events from firebase)
+        let ref = Database.database().reference() //setting up the connection to firebase
+        //date comes in as a parameter so can convert the date to a string using the DateFormatter
+        let monthDateFormatter = DateFormatter() //needed to see the month as a seperate variable
+        monthDateFormatter.dateFormat = "MM" //see the month as a string
+        let yearDateFormatter = DateFormatter() //needed to see the year as a seperate variable
+        yearDateFormatter.dateFormat = "YYYY" //see the year as a string
+        let dayDateFormatter = DateFormatter() //needed to see the date as a seperate variable
+        dayDateFormatter.dateFormat = "dd" //see the date as a string
+        ref.child("users/\(Auth.auth().currentUser?.uid ?? "")/events").observe(.value, with:{ (snapshot: DataSnapshot) in //starts searching database by child
+            let dateFormatter = DateFormatter() //date comes in as a parameter so can convert the date to a string using the DateFormatter
+            let todayM = monthDateFormatter.string(from: Date()) //gets todays month, date, and year
+            let todayY = yearDateFormatter.string(from: Date()) //gets todays month, date, and year
+            dateFormatter.dateFormat = "MM/dd/yyyy HH:mm:ss" //turing into a string, want the month date, year, at the hour, minutes, and seconds
+            for ev in snapshot.children { //snapshot = database is always running so have to pull the snapshot of it (basically take a picture)
+                if let child = ev as? DataSnapshot { //iterating through the events on the database, everything watched and each row/object on the database and getting all of the information from that including the time, the date, and the video you atched
+                    if let each = child.value! as? [String: AnyObject] { //looking at specific child branch, checking that it is an object
+                        //as? = mean it could be null statement since it does not know what the data looks like so you have to check that it is giving the data that you are expecting
+                        if let dateStr = each["dateWatched"] as? String, let timeStr = each["timeWatched"] as? String, let videoStr = each["videoWatched"] as? String { //checking that this object you are looking at has the three descripters (datewatched, timewatched, and videowatched) that you are expecting
+                            let e = Event() //creating an event object
+                            e.date = dateFormatter.date(from: "\(dateStr) \(timeStr)") ?? Date() //formatting the date and time from the event
+                            let m = monthDateFormatter.string(from: e.date) //getting month
+                            let y = yearDateFormatter.string(from: e.date) //getting year
+                            let d = dayDateFormatter.string(from: e.date) //getting date
+                            e.time = timeStr //read the time as a string (formatted above)
+                            e.description = videoStr //read the time as a string (formatted above)
                             //if there is no months add the month, day, event
-                            if self.allEvents.count == 0
+                            if self.allEvents.count == 0 //BEGIN HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                             {
                                 let newEventMonth = EventsMonth()
                                 newEventMonth.month = m
