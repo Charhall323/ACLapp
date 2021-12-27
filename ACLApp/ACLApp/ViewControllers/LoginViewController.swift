@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ACLApp
 //
-//  Created by  Charlotte Hallisey on 11/11/21.
+//  
 //
 
 // purpose: takes in username and password, logs into firebase and if it works takes it to the next screen and if it does not makes it blank

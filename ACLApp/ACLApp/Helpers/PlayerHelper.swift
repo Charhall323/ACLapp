@@ -2,10 +2,10 @@
 //  PlayerHelper.swift
 //  ACLApp
 //
-//  Created by  Charlotte Hallisey on 12/23/21.
+//  
 //
 
-//purpose: helper class used to get different events from the date
+//purpose: helper class used to get different events from the date (have to do this because in the realitime datebase each child has to have a unique name so the way this helper function is used it will never trigger twice in the same seconds and will always be unique)
 import Foundation
 import FirebaseDatabase
 import FirebaseAuth

@@ -2,7 +2,7 @@
 //  EventObjects.swift
 //  ACLApp
 //
-//  Created by  Charlotte Hallisey on 12/23/21.
+//  
 //
 
 //purpose: three classes stored in firebase, have to story to properly display in calendar in the case of multiple events (calendar stores by the month but want to display if there are multiple events on the same day)
