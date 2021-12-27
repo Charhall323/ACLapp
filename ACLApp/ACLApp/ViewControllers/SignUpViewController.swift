@@ -27,7 +27,7 @@ class SignUpViewController: UIViewController {
                 if let error = error as NSError? { //if there is an error in the password (does not follow designated parameters)
                 switch AuthErrorCode(rawValue: error.code) { //then there is an error
                 default:
-                    self.showAlert(message: "Cannot create user") //the password cannot be created
+                    self.showAlert(message: "Cannot create user") //the password cannot be created, alert shown (calls function below showing error message)
                 }
               } else {
                   self.sendVerificationMail() //if the password works have to check if email passes
@@ -61,7 +61,7 @@ class SignUpViewController: UIViewController {
                 }
                 else
                 {
-                    self.showAlert(message: "Invalid Email") //if the verification email cannot be sent then the email is not real, show message saying invalid email)
+                    self.showAlert(message: "Invalid Email") //if the verification email cannot be sent then the email is not real, show message saying invalid email), calls show Alert method to show email does not work
                 }
             })
         }
@@ -71,10 +71,10 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    func showAlert(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        self.present(alert, animated: true, completion: nil)
-        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: {_ in alert.dismiss(animated: true, completion: nil)})
+    func showAlert(message: String) { //used to just be able to show an alert to the user (ex: invalid username/password, incorrect email, cannot log in etc)
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert) //create error message
+        self.present(alert, animated: true, completion: nil) //actually shows message
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: {_ in alert.dismiss(animated: true, completion: nil)}) //alert shown (alert removed after error message has been seen (3 seconds interval)
     }
     
 

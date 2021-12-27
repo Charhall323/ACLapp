@@ -107,13 +107,13 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
                                 let newEventMonth = EventsMonth() //all events is a list of months so checks if this is the first events ever (checks the database), if it is creates a new event month
                                 newEventMonth.month = m //creating new event month
                                 newEventMonth.year = y //creating new event year
-                                let newEventDate = EventDate() //creating new event date
+                                let newEventDate = EventDate() //creating new event date - this part creates a new day for events since that day does not exist in the month (adding that days parameters - day of the month, date, and the event to it)
                                 //events live inside the day and the day lives inside the month (just how I chose to create it)
-                                newEventDate.date = dateStr //read it as a string from above
-                                newEventDate.day = Int(d) ?? 1
-                                newEventDate.events.append(e) //creating the event (appending it)
-                                newEventMonth.days.append(newEventDate) //apending the event to the day
-                                self.allEvents.append(newEventMonth) //apend the day(/event) to the month
+                                newEventDate.date = dateStr //read it as a string from above, adding the days parameters date to it
+                                newEventDate.day = Int(d) ?? 1 //adding the days parameters date to it
+                                newEventDate.events.append(e) //creating the event (appending it), adding the event to the day
+                                newEventMonth.days.append(newEventDate) //apending the event to the day, adding the month to the day
+                                self.allEvents.append(newEventMonth) //apend the day(/event) to the month //all parameters added to the event
                             }
                             else { //this else is looking if the month is already there
                                 for eventMonth in self.allEvents { //have to sort through all the months to see if its there
@@ -231,7 +231,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
             }
         }
         self.monthCalendarView.scroll(to: Date(), animated: true) //used so that the calendar will scroll to the correct year and month that we are currently on (before this was scrolling to one year prior based on the calendar set up)
-        return Set(days.map{$0})
+        return Set(days.map{$0}) //used because the method requires a set of integers to be returned so that they correspond to the days of the month (that require the little dots to mean that they have events on them)
     }
         
     
