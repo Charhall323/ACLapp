@@ -90,7 +90,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
             let todayY = yearDateFormatter.string(from: Date()) //gets todays month, date, and year
             dateFormatter.dateFormat = "MM/dd/yyyy HH:mm:ss" //turing into a string, want the month date, year, at the hour, minutes, and seconds
             for ev in snapshot.children { //snapshot = database is always running so have to pull the snapshot of it (basically take a picture)
-                if let child = ev as? DataSnapshot { //iterating through the events on the database, everything watched and each row/object on the database and getting all of the information from that including the time, the date, and the video you atched
+                if let child = ev as? DataSnapshot { //iterating through the events on the database, everything watched and each row/object on the database and getting all of the information from that including the time, the date, and the video you watched
                     if let each = child.value! as? [String: AnyObject] { //looking at specific child branch, checking that it is an object
                         //as? = mean it could be null statement since it does not know what the data looks like so you have to check that it is giving the data that you are expecting
                         if let dateStr = each["dateWatched"] as? String, let timeStr = each["timeWatched"] as? String, let videoStr = each["videoWatched"] as? String { //checking that this object you are looking at has the three descripters (datewatched, timewatched, and videowatched) that you are expecting
