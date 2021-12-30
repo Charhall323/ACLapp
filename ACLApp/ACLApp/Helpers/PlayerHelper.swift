@@ -6,6 +6,9 @@
 //
 
 //purpose: helper class used to get different events from the date (have to do this because in the realitime datebase each child has to have a unique name so the way this helper function is used it will never trigger twice in the same seconds and will always be unique)
+
+//created a seperate class because gets called in multiple places, uploads the event to firebase once the video reaches the 80%
+
 import Foundation
 import FirebaseDatabase
 import FirebaseAuth
