@@ -35,6 +35,7 @@ class SignUpViewController: UIViewController {
 //                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //                  let vc = storyboard.instantiateViewController(withIdentifier: "TabController")
 //                  self.present(vc, animated: true)
+//                  var isEmailVerified: Bool { get } was trying to make it not log in until verified
               }
             }
         }

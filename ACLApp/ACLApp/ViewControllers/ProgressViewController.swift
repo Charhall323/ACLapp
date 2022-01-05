@@ -255,7 +255,7 @@ class ProgressViewController: UIViewController, CalendarViewDelegate, UITableVie
         return cell //show the cell
     }
     
-    //this table view tells you how many rows there needs to be (physical number of rows) 
+    //this table view tells you how many rows there needs to be (physical number of rows)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return eventsForTheDay.count //creates the proper rows based on how many events have been watched (counts the number of events and then creates rows for them)
     }
